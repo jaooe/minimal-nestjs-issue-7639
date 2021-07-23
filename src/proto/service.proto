@@ -1,0 +1,11 @@
+syntax = "proto3";
+package service;
+service Service {
+  rpc searchCustomerAndStore(RequestData) returns (Response) {}
+}
+message RequestData {
+  string id = 1;
+}
+message Response {
+  int32 responseCode = 1;
+}
